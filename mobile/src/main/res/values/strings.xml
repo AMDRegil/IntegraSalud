@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">IntegraSalud</string>
+    <string name="nuevoUsuario">¿Eres nuevo? Regístrate</string>
+    <string name="bienvenidoLabel">¡Bienvenido a Integra!</string>
+    <string name="continuarLabel">Inicia sesión para continuar</string>
+    <string name="emailEditText">Email</string>
+    <string name="logo">Integra</string>
+    <string name="inicio">Inicio</string>
+    <string name="email">Email</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="contrasena2">Confirmar Contraseña</string>
+    <string name="registro">Regístrate para empezar a usar Integra</string>
+    <string name="registrar">Registrar</string>
+    <string name="cuenta">¿Ya tienes una cuenta? Inicia Sesión</string>
+    <string name="nombre">Nombre Completo</string>
+    <string name="logout">Logout</string>
+    <string name="by">By</string>
+    <string name="integra">Integra</string>
+    <string name="edad">Edad</string>
+    <string name="clinica">Clinica</string>
+    <string name="agregar">Agregar</string>
+    <string name="actualizar">Actualizar</string>
+    <string name="mostrar">Mostrar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="id">ID del Paciente</string>
+    <string name="bienvenido">Salud Integra</string>
+    <string name="recordatorio">Recuerde registrar su consumo de agua</string>
+    <string name="cantidad">Usted ha bebido (ml):</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="logo">Logo</string>
+</resources>
