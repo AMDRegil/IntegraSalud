@@ -9,22 +9,22 @@
 
     <!--text view for displaying course name-->
     <TextView
-        android:id="@+id/idTVCourseName"
+        android:id="@+id/idTVPaciente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="3dp"
         android:padding="4dp"
-        android:text="Course Name"
+        android:text="Nombre del Paciente"
         android:textColor="@color/white"
         android:textSize="15sp"
         android:textStyle="bold" />
 
     <!--image view for displaying course image-->
     <ImageView
-        android:id="@+id/idIVCourse"
+        android:id="@+id/idIVPaciente"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_below="@id/idTVCourseName"
+        android:layout_below="@id/idTVPaciente"
         android:layout_centerVertical="true"
         android:layout_margin="4dp"
         android:padding="4dp"
@@ -35,10 +35,13 @@
         android:id="@+id/idTVCourseDesc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idTVCourseName"
-        android:layout_margin="4dp"
-        android:layout_toEndOf="@id/idIVCourse"
-        android:layout_toRightOf="@id/idIVCourse"
+        android:layout_below="@id/idTVPaciente"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:layout_toEndOf="@id/idIVPaciente"
+        android:layout_toRightOf="@id/idIVPaciente"
         android:padding="3dp"
         android:text="Description"
         android:textColor="@color/white" />
@@ -50,19 +53,19 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/idTVCourseDesc"
         android:layout_margin="4dp"
-        android:layout_toRightOf="@id/idIVCourse"
+        android:layout_toRightOf="@id/idIVPaciente"
         android:padding="3dp"
         android:text="Suited for"
         android:textColor="@color/white" />
 
     <!--text view for displaying course price-->
     <TextView
-        android:id="@+id/idTVCoursePrice"
+        android:id="@+id/idTVPacienteEdad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/idTVSuitedFor"
         android:layout_margin="4dp"
-        android:layout_toRightOf="@id/idIVCourse"
+        android:layout_toRightOf="@id/idIVPaciente"
         android:padding="3dp"
         android:text="Price"
         android:textColor="@color/white"
@@ -73,18 +76,18 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/idTVCoursePrice"
+        android:layout_below="@id/idTVPacienteEdad"
         android:orientation="horizontal"
         android:weightSum="2">
 
         <!--button for editing course-->
         <Button
-            android:id="@+id/idBtnEditCourse"
+            android:id="@+id/idBtnEditPaciente"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:layout_weight="1"
-            android:text="Edit Course"
+            android:text="Editar Paciente"
             android:textAllCaps="false" />
 
         <!--button for viewing course details-->

@@ -21,36 +21,36 @@ public class DatosRVAdapter //extends RecyclerView.Adapter<DatosRVAdapter.ViewHo
 {
     /*
     // creating variables for our list, context, interface and position.
-    private ArrayList<PacienteRVModal> courseRVModalArrayList;
+    private ArrayList<DatosRVModal> courseRVModalArrayList;
     private Context context;
     private CourseClickInterface courseClickInterface;
     int lastPos = -1;
 
     // creating a constructor.
-    public PacienteRVAdapter(ArrayList<PacienteRVModal> courseRVModalArrayList, Context context, CourseClickInterface courseClickInterface) {
-        this.courseRVModalArrayList = courseRVModalArrayList;
+    public DatosRVAdapter(ArrayList<DatosRVModal> datosRVModalArrayList, Context context, DatosClickInterface datosClickInterface) {
+        this.datosRVModalArrayList = datosRVModalArrayList;
         this.context = context;
-        this.courseClickInterface = courseClickInterface;
+        this.datosClickInterface = datosClickInterface;
     }
 
     @NonNull
     @Override
-    public PacienteRVAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public DatosRVAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         // inflating our layout file on below line.
-        View view = LayoutInflater.from(context).inflate(R.layout.paciente_rv_item, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.datos_rv_item, parent, false);
         return new ViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PacienteRVAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
+    public void onBindViewHolder(@NonNull DatosRVAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         // setting data to our recycler view item on below line.
-        PacienteRVModal courseRVModal = courseRVModalArrayList.get(position);
-        holder.courseTV.setText(courseRVModal.getNombre());
-        holder.coursePriceTV.setText("Rs. " + courseRVModal.getApellidos());
-        Picasso.get().load(courseRVModal.getEdad()).into(holder.courseIV);
+        DatosRVModal datosRVModal = datosRVModalArrayList.get(position);
+        holder.datosTV.setText(datosRVModal.getOxi());
+        holder.datosPriceTV.setText("Rs. " + datosRVModal.getApellidos());
+        Picasso.get().load(datosRVModal.getEdad()).into(holder.courseIV);
         // adding animation to recycler view item on below line.
         setAnimation(holder.itemView, position);
-        holder.courseIV.setOnClickListener(new View.OnClickListener() {
+        holder.datosIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 courseClickInterface.onCourseClick(position);
@@ -69,19 +69,19 @@ public class DatosRVAdapter //extends RecyclerView.Adapter<DatosRVAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return courseRVModalArrayList.size();
+        return datosRVModalArrayList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // creating variable for our image view and text view on below line.
-        private ImageView courseIV;
-        private TextView courseTV, coursePriceTV;
+        private ImageView datosIV;
+        private TextView datosTV, coursePriceTV;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             // initializing all our variables on below line.
-            courseIV = itemView.findViewById(R.id.idIVCourse);
-            courseTV = itemView.findViewById(R.id.idTVCOurseName);
+            datosIV = itemView.findViewById(R.id.idIVDatos);
+            datosTV = itemView.findViewById(R.id.idTVCOurseName);
             coursePriceTV = itemView.findViewById(R.id.idTVCousePrice);
         }
     }

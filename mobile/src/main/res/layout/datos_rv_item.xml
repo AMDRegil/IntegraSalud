@@ -18,20 +18,20 @@ android:background="@color/black_shade_1">
 
         <!--edit text for adding a course name-->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/idTILId"
+            android:id="@+id/idTILDatos"
             style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:hint="ID de Paciente"
+            android:hint="ID Actividad"
             android:padding="5dp"
             android:textColorHint="@color/white"
             app:hintTextColor="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/idEdtId"
+                android:id="@+id/idEdtDatos"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:ems="10"
@@ -43,20 +43,20 @@ android:background="@color/black_shade_1">
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/idTILNombre"
+            android:id="@+id/idTILOxi"
             style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:hint="Nombre"
+            android:hint="Oxigenación"
             android:padding="5dp"
             android:textColorHint="@color/white"
             app:hintTextColor="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/idEdtNombre"
+                android:id="@+id/idEdtOxi"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:ems="10"
@@ -68,20 +68,20 @@ android:background="@color/black_shade_1">
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/idTILApellidos"
+            android:id="@+id/idTILRitmo"
             style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:hint="Apellidos"
+            android:hint="Ritmo Cardiaco"
             android:padding="5dp"
             android:textColorHint="@color/white"
             app:hintTextColor="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/idEdtApellidos"
+                android:id="@+id/idEdtRitmo"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:ems="10"
@@ -94,21 +94,21 @@ android:background="@color/black_shade_1">
 
         <!--edit text for adding a course price-->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/idTILEdad"
+            android:id="@+id/idTILCalorias"
             style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:hint="Edad"
+            android:hint="Calorias"
             android:padding="5dp"
             android:textColorHint="@color/white"
             app:boxStrokeColor="@color/purple_200"
             app:hintTextColor="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/idEdtEdad"
+                android:id="@+id/idEdtCalorias"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:ems="10"
@@ -122,20 +122,20 @@ android:background="@color/black_shade_1">
 
         <!--edit text for adding a course best suited for-->
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/idTILClinica"
+            android:id="@+id/idTILDistancia"
             style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:hint="Clinica"
+            android:hint="Distancia"
             android:padding="5dp"
             android:textColorHint="@color/white"
             app:hintTextColor="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/idEdtClinica"
+                android:id="@+id/idEdtDistancia"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:ems="10"
@@ -147,21 +147,21 @@ android:background="@color/black_shade_1">
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/idTILPeso"
+            android:id="@+id/idTILPasos"
             style="@style/LoginTextInputLayoutStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="10dp"
-            android:hint="Peso"
+            android:hint="Pasos"
             android:padding="5dp"
             android:textColorHint="@color/white"
             app:boxStrokeColor="@color/purple_200"
             app:hintTextColor="@color/white">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/idEdtPeso"
+                android:id="@+id/idEdtPasos"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:ems="10"
@@ -171,59 +171,6 @@ android:background="@color/black_shade_1">
                 android:textColorHint="@color/white"
                 android:textSize="14sp"
                 app:boxStrokeColor="@color/purple_200" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/idTILAltura"
-            style="@style/LoginTextInputLayoutStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:hint="Altura"
-            android:padding="5dp"
-            android:textColorHint="@color/white"
-            app:boxStrokeColor="@color/purple_200"
-            app:hintTextColor="@color/white">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/idEdtAltura"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ems="10"
-                android:importantForAutofill="no"
-                android:inputType="phone"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textSize="14sp"
-                app:boxStrokeColor="@color/purple_200" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <!--edit text for adding a course image link-->
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/idTILActividad"
-            style="@style/LoginTextInputLayoutStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="10dp"
-            android:hint="Actividad"
-            android:padding="5dp"
-            android:textColorHint="@color/white"
-            app:hintTextColor="@color/white">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/idEdtActividad"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ems="10"
-                android:importantForAutofill="no"
-                android:inputType="textImeMultiLine|textMultiLine"
-                android:textColor="@color/white"
-                android:textColorHint="@color/white"
-                android:textSize="14sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
@@ -234,7 +181,7 @@ android:background="@color/black_shade_1">
 
             <!--button for updating a new course-->
             <Button
-                android:id="@+id/idBtnAgregarPaciente"
+                android:id="@+id/idBtnAgregarDatos"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -243,12 +190,12 @@ android:background="@color/black_shade_1">
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_back"
-                android:text="Actualizar /n Paciente"
+                android:text="Actualizar \n Datos"
                 android:textAllCaps="false" />
 
             <!--button for deleting a course-->
             <Button
-                android:id="@+id/idBtnDeletePaciente"
+                android:id="@+id/idBtnDeleteDatos"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -257,7 +204,7 @@ android:background="@color/black_shade_1">
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/button_back"
-                android:text="Eliminar \n Paciente"
+                android:text="Eliminar \n Datos"
                 android:textAllCaps="false" />
 
         </LinearLayout>

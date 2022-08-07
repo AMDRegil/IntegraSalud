@@ -19,12 +19,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-public class AgregarPacienteActivity extends AppCompatActivity {
+public class AgregarDatosActivity extends AppCompatActivity {
 
     // creating variables for our button, edit text,
     // firebase database, database refrence, progress bar.
-    private Button addPaciente;
-    private TextInputEditText nombreEdt, apellidosEdt, edadEdt, clinicaEdt, pesoEdt, alturaEdt, actividadEdt, idEdt;
+    private Button addDatos;
+    private TextInputEditText oxiEdt, ritmoEdt, caloriasEdt, distanciaEdt, pasosEdt, idEdt;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
     private ProgressBar loadingPB;
@@ -33,56 +33,52 @@ public class AgregarPacienteActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_agregar_paciente);
+        setContentView(R.layout.activity_agregar_datos);
         // initializing all our variables.
-        addPaciente = findViewById(R.id.idBtnAddPaciente);
-        idEdt = findViewById(R.id.idEdtId);
-        nombreEdt = findViewById(R.id.idEdtNombre);
-        apellidosEdt = findViewById(R.id.idEdtApellidos);
-        edadEdt = findViewById(R.id.idEdtEdad);
-        clinicaEdt = findViewById(R.id.idEdtClinica);
-        pesoEdt = findViewById(R.id.idEdtPeso);
-        alturaEdt = findViewById(R.id.idEdtPeso);
-        actividadEdt = findViewById(R.id.idEdtPeso);
+        addDatos = findViewById(R.id.idBtnAddPaciente);
+        idEdt = findViewById(R.id.idTILDatos);
+        oxiEdt = findViewById(R.id.idTILOxi);
+        ritmoEdt = findViewById(R.id.idTILRitmo);
+        caloriasEdt = findViewById(R.id.idTILCalorias);
+        distanciaEdt = findViewById(R.id.idTILDistancia);
+        pasosEdt = findViewById(R.id.idTILPasos);
         loadingPB = findViewById(R.id.idPBLoading);
         firebaseDatabase = FirebaseDatabase.getInstance();
         // on below line creating our database reference.
-        databaseReference = firebaseDatabase.getReference("Pacientes");
+        databaseReference = firebaseDatabase.getReference("Datos");
         // adding click listener for our add course button.
-        addPaciente.setOnClickListener(new View.OnClickListener() {
+        addDatos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 loadingPB.setVisibility(View.VISIBLE);
                 // getting data from our edit text.
                 String id = idEdt.getText().toString();
-                String nombre = nombreEdt.getText().toString();
-                String apellidos = apellidosEdt.getText().toString();
-                String edad = edadEdt.getText().toString();
-                String clinica = clinicaEdt.getText().toString();
-                String peso = pesoEdt.getText().toString();
-                String altura = alturaEdt.getText().toString();
-                String actividad = actividadEdt.getText().toString();
+                String oxi = oxiEdt.getText().toString();
+                String ritmo = ritmoEdt.getText().toString();
+                String calorias = caloriasEdt.getText().toString();
+                String distancia = distanciaEdt.getText().toString();
+                String pasos = pasosEdt.getText().toString();
                 //String id = id.getText().toString();
                 //courseID = courseName;
                 // on below line we are passing all data to our modal class.
-                PacienteRVModal pacienteRVModal = new PacienteRVModal(id, nombre, apellidos, edad, clinica, peso, altura, actividad);
+                DatosRVModal datosRVModal = new DatosRVModal(id, oxi, ritmo, calorias, distancia, pasos);
                 // on below line we are calling a add value event
                 // to pass data to firebase database.
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         // on below line we are setting data in our firebase database.
-                        databaseReference.child(id).setValue(pacienteRVModal);
+                        databaseReference.child(id).setValue(datosRVModal);
                         // displaying a toast message.
-                        Toast.makeText(AgregarPacienteActivity.this, "Paciente Agregado..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AgregarDatosActivity.this, "Datos Agregados..", Toast.LENGTH_SHORT).show();
                         // starting a main activity.
-                        startActivity(new Intent(AgregarPacienteActivity.this, MainActivity.class));
+                        startActivity(new Intent(AgregarDatosActivity.this, MainActivity.class));
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
                         // displaying a failure message on below line.
-                        Toast.makeText(AgregarPacienteActivity.this, "Error en Agregar Paciente..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(AgregarDatosActivity.this, "Error en Agregar Datos..", Toast.LENGTH_SHORT).show();
                     }
                 });
             }

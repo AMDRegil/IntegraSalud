@@ -7,13 +7,11 @@ public class DatosRVModal implements Parcelable {
 
     //Crear variables para los campos
     private String id;
-    private String nombre;
-    private String apellidos;
-    private String edad;
-    private String clinica;
-    private String peso;
-    private String altura;
-    private String actividad;
+    private String oxi;
+    private String ritmo;
+    private String calorias;
+    private String distancia;
+    private String pasos;
 
     public String getId() {
         return id;
@@ -30,94 +28,74 @@ public class DatosRVModal implements Parcelable {
 
     protected DatosRVModal(Parcel in) {
         id = in.readString();
-        nombre = in.readString();
-        apellidos = in.readString();
-        edad = in.readString();
-        clinica = in.readString();
-        peso = in.readString();
-        altura = in.readString();
-        actividad = in.readString();
+        oxi = in.readString();
+        ritmo = in.readString();
+        calorias = in.readString();
+        distancia = in.readString();
+        pasos = in.readString();
     }
 
-    public static final Creator<PacienteRVModal> CREATOR = new Creator<PacienteRVModal>() {
+    public static final Creator<DatosRVModal> CREATOR = new Creator<DatosRVModal>() {
         @Override
-        public PacienteRVModal createFromParcel(Parcel in) {
-            return new PacienteRVModal(in);
+        public DatosRVModal createFromParcel(Parcel in) {
+            return new DatosRVModal(in);
         }
 
         @Override
-        public PacienteRVModal[] newArray(int size) {
-            return new PacienteRVModal[size];
+        public DatosRVModal[] newArray(int size) {
+            return new DatosRVModal[size];
         }
     };
 
     //Crear métodos get y set
 
-    public String getNombre() {
-        return nombre;
+    public String getOxi() {
+        return oxi;
     }
 
-    public void setNombre(String Nombre) {
-        this.nombre = nombre;
+    public void setOxi(String Oxi) {
+        this.oxi = oxi;
     }
 
-    public String getApellidos() {
-        return apellidos;
+    public String getRitmo() {
+        return ritmo;
     }
 
-    public void setApellidos(String Apellidos) {
-        this.apellidos = apellidos;
+    public void setRitmo(String Ritmo) {
+        this.ritmo = ritmo;
     }
 
-    public String getEdad() {
-        return edad;
+    public String getCalorias() {
+        return calorias;
     }
 
-    public void setEdad(String Edad) {
-        this.edad = edad;
+    public void setCalorias(String Calorias) {
+        this.calorias = calorias;
     }
 
-    public String getClinica() {
-        return clinica;
+    public String getDistancia() {
+        return distancia;
     }
 
-    public void setClinica(String Clinica) {
-        this.clinica = clinica;
+    public void setDistancia(String Distancia) {
+        this.distancia = distancia;
     }
 
-    public String getPeso() {
-        return peso;
+    public String getPasos() {
+        return pasos;
     }
 
-    public void setPeso(String Peso) {
-        this.peso = peso;
+    public void setPasos(String Peso) {
+        this.pasos = pasos;
     }
 
-    public String getAltura() {
-        return altura;
-    }
-
-    public void setAltura(String Altura) {
-        this.altura = altura;
-    }
-
-    public String getActividad() {
-        return actividad;
-    }
-
-    public void setActividad(String Actividad) {
-        this.actividad = actividad;
-    }
-
-    public DatosRVModal(String id, String nombre, String apellidos, String edad, String clinica, String peso, String altura, String actividad) {
+    public DatosRVModal(String id, String oxi, String ritmo, String calorias, String distancia, String pasos) {
         this.id = id;
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.edad = edad;
-        this.clinica = clinica;
-        this.peso = peso;
-        this.altura = altura;
-        this.actividad = actividad;
+        this.oxi = oxi;
+        this.ritmo = ritmo;
+        this.calorias = calorias;
+        this.distancia = distancia;
+        this.pasos = pasos;
     }
 
     @Override
@@ -128,12 +106,10 @@ public class DatosRVModal implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(id);
-        dest.writeString(nombre);
-        dest.writeString(apellidos);
-        dest.writeString(edad);
-        dest.writeString(clinica);
-        dest.writeString(peso);
-        dest.writeString(altura);
-        dest.writeString(actividad);
+        dest.writeString(oxi);
+        dest.writeString(ritmo);
+        dest.writeString(calorias);
+        dest.writeString(distancia);
+        dest.writeString(pasos);
     }
 }

@@ -16,7 +16,7 @@
 
         <!--image view for our course-->
         <ImageView
-            android:id="@+id/idIVCourse"
+            android:id="@+id/idIVPaciente"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop" />
@@ -26,7 +26,7 @@
             android:id="@+id/idTVNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/idIVCourse"
+            android:layout_below="@id/idIVPaciente"
             android:layout_margin="3dp"
             android:layout_toStartOf="@id/idTVEdad"
             android:layout_toLeftOf="@id/idTVEdad"
@@ -41,7 +41,7 @@
             android:id="@+id/idTVEdad"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/idIVEdad"
+            android:layout_below="@id/idIVPaciente"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_margin="3dp"

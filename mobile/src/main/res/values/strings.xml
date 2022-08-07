@@ -24,8 +24,8 @@
     <string name="eliminar">Eliminar</string>
     <string name="id">ID del Paciente</string>
     <string name="bienvenido">Salud Integra</string>
-    <string name="recordatorio">Recuerde registrar su consumo de agua</string>
-    <string name="cantidad">Usted ha bebido (ml):</string>
+    <string name="recordatorio">Recuerde registrar su oxigenación</string>
+    <string name="cantidad">Su oxigenación es (%):</string>
     <string name="aceptar">Aceptar</string>
-    <string name="logo">Logo</string>
+    <string name="logo1">Logo</string>
 </resources>

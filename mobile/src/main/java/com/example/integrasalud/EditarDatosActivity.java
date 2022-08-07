@@ -24,10 +24,10 @@ public class EditarDatosActivity extends AppCompatActivity {
 
     // creating variables for our edit text, firebase database,
     // database reference, course rv modal,progress bar.
-    private TextInputEditText idEdt, nombreEdt, apellidosEdt, edadEdt, clinicaEdt, pesoEdt, alturaEdt, actividadEdt;
+    private TextInputEditText idEdtDatos, oxiEdt, ritmoEdt, caloriasEdt, distanciaEdt, pasosEdt;
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    PacienteRVModal pacienteRVModal;
+    DatosRVModal datosRVModal;
     private ProgressBar loadingPB;
     // creating a string for our course id.
     private String id;
@@ -35,61 +35,52 @@ public class EditarDatosActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_editar_paciente);
+        setContentView(R.layout.activity_editar_datos);
         // initializing all our variables on below line.
-        Button addPacienteBtn = findViewById(R.id.idBtnAddPaciente);
+        Button addDatosBtn = findViewById(R.id.idBtnAddDatos);
         //id = findViewById(R.id.idEdtId);
-        nombreEdt = findViewById(R.id.idEdtNombre);
-        apellidosEdt = findViewById(R.id.idEdtApellidos);
-        edadEdt = findViewById(R.id.idEdtEdad);
-        clinicaEdt = findViewById(R.id.idEdtClinica);
-        pesoEdt = findViewById(R.id.idEdtPeso);
-        alturaEdt = findViewById(R.id.idEdtAltura);
-        actividadEdt = findViewById(R.id.idEdtActividad);
+        oxiEdt = findViewById(R.id.idEdtOxi);
+        ritmoEdt = findViewById(R.id.idEdtRitmo);
+        caloriasEdt = findViewById(R.id.idEdtCalorias);
+        distanciaEdt = findViewById(R.id.idEdtDistancia);
+        pasosEdt = findViewById(R.id.idEdtPasos);
         loadingPB = findViewById(R.id.idPBLoading);
         firebaseDatabase = FirebaseDatabase.getInstance();
         // on below line we are getting our modal class on which we have passed.
-        pacienteRVModal = getIntent().getParcelableExtra("paciente");
-        Button deletePacienteBtn = findViewById(R.id.idBtnDeletePaciente);
+        datosRVModal = getIntent().getParcelableExtra("datos");
+        Button deleteDatosBtn = findViewById(R.id.idBtnDeleteDatos);
 
-        if (pacienteRVModal != null) {
+        if (datosRVModal != null) {
             // on below line we are setting data to our edit text from our modal class.
-            nombreEdt.setText(pacienteRVModal.getNombre());
-            apellidosEdt.setText(pacienteRVModal.getApellidos());
-            edadEdt.setText(pacienteRVModal.getEdad());
-            clinicaEdt.setText(pacienteRVModal.getClinica());
-            pesoEdt.setText(pacienteRVModal.getPeso());
-            alturaEdt.setText(pacienteRVModal.getAltura());
-            actividadEdt.setText(pacienteRVModal.getActividad());
-            id = pacienteRVModal.getId();
+            oxiEdt.setText(datosRVModal.getOxi());
+            ritmoEdt.setText(datosRVModal.getRitmo());
+            caloriasEdt.setText(datosRVModal.getCalorias());
+            distanciaEdt.setText(datosRVModal.getDistancia());
+            pasosEdt.setText(datosRVModal.getPasos());
+            id = datosRVModal.getId();
         }
 
         // on below line we are initialing our database reference and we are adding a child as our course id.
-        databaseReference = firebaseDatabase.getReference("Pacientes").child(id);
+        databaseReference = firebaseDatabase.getReference("Datos").child(id);
         // on below line we are adding click listener for our add course button.
-        addPacienteBtn.setOnClickListener(new View.OnClickListener() {
+        addDatosBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // on below line we are making our progress bar as visible.
                 loadingPB.setVisibility(View.VISIBLE);
                 // on below line we are getting data from our edit text.
-                String nombre = nombreEdt.getText().toString();
-                String apellidos = apellidosEdt.getText().toString();
-                String edad = edadEdt.getText().toString();
-                String clinica = clinicaEdt.getText().toString();
-                String peso = pesoEdt.getText().toString();
-                String altura = alturaEdt.getText().toString();
-                String actividad = actividadEdt.getText().toString();
+                String oxi = oxiEdt.getText().toString();
+                String ritmo = ritmoEdt.getText().toString();
+                String calorias = caloriasEdt.getText().toString();
+                String distancia = distanciaEdt.getText().toString();
+                String pasos = pasosEdt.getText().toString();
                 // on below line we are creating a map for
                 // passing a data using key and value pair.
                 Map<String, Object> map = new HashMap<>();
-                map.put("nombre", nombre);
-                map.put("apellidos", apellidos);
-                map.put("edad", edad);
-                map.put("clinica", clinica);
-                map.put("peso", peso);
-                map.put("altura", altura);
-                map.put("actividad", actividad);
+                map.put("oxi", oxi);
+                map.put("ritmo", ritmo);
+                map.put("calorias", calorias);
+                map.put("distancia", distancia);
                 map.put("id", id);
 
                 // on below line we are calling a database reference on
@@ -102,37 +93,37 @@ public class EditarDatosActivity extends AppCompatActivity {
                         // adding a map to our database.
                         databaseReference.updateChildren(map);
                         // on below line we are displaying a toast message.
-                        Toast.makeText(EditarPacienteActivity.this, "Paciente Actualizado..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditarDatosActivity.this, "Datos Actualizados..", Toast.LENGTH_SHORT).show();
                         // opening a new activity after updating our coarse.
-                        startActivity(new Intent(EditarPacienteActivity.this, MainActivity2.class));
+                        startActivity(new Intent(EditarDatosActivity.this, MainActivity2.class));
                     }
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError error) {
                         // displaying a failure message on toast.
-                        Toast.makeText(EditarPacienteActivity.this, "Error en Actualizar Paciente..", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditarDatosActivity.this, "Error en Actualizar Datos..", Toast.LENGTH_SHORT).show();
                     }
                 });
             }
         });
 
         // adding a click listener for our delete course button.
-        deletePacienteBtn.setOnClickListener(new View.OnClickListener() {
+        deleteDatosBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // calling a method to delete a course.
-                deletePaciente();
+                deleteDatos();
             }
         });
 
     }
 
-    private void deletePaciente() {
+    private void deleteDatos() {
         // on below line calling a method to delete the course.
         databaseReference.removeValue();
         // displaying a toast message on below line.
-        Toast.makeText(this, "Paciente Eliminado..", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Datos Eliminados..", Toast.LENGTH_SHORT).show();
         // opening a main activity on below line.
-        startActivity(new Intent(EditarPacienteActivity.this, MainActivity2.class));
+        startActivity(new Intent(EditarDatosActivity.this, MainActivity2.class));
     }
 }

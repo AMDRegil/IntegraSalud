@@ -17,20 +17,20 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class PacienteRVAdapter //extends RecyclerView.Adapter<PacienteRVAdapter.ViewHolder>
+public class PacienteRVAdapter extends RecyclerView.Adapter<PacienteRVAdapter.ViewHolder>
 {
-    /*
+
     // creating variables for our list, context, interface and position.
-    private ArrayList<PacienteRVModal> courseRVModalArrayList;
+    private ArrayList<PacienteRVModal> pacienteRVModalArrayList;
     private Context context;
-    private CourseClickInterface courseClickInterface;
+    private PacienteClickInterface pacienteClickInterface;
     int lastPos = -1;
 
     // creating a constructor.
-    public PacienteRVAdapter(ArrayList<PacienteRVModal> courseRVModalArrayList, Context context, CourseClickInterface courseClickInterface) {
-        this.courseRVModalArrayList = courseRVModalArrayList;
+    public PacienteRVAdapter(ArrayList<PacienteRVModal> pacienteRVModalArrayList, Context context, PacienteClickInterface pacienteClickInterface) {
+        this.pacienteRVModalArrayList = pacienteRVModalArrayList;
         this.context = context;
-        this.courseClickInterface = courseClickInterface;
+        this.pacienteClickInterface = pacienteClickInterface;
     }
 
     @NonNull
@@ -44,16 +44,16 @@ public class PacienteRVAdapter //extends RecyclerView.Adapter<PacienteRVAdapter.
     @Override
     public void onBindViewHolder(@NonNull PacienteRVAdapter.ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         // setting data to our recycler view item on below line.
-        PacienteRVModal courseRVModal = courseRVModalArrayList.get(position);
-        holder.courseTV.setText(courseRVModal.getNombre());
-        holder.coursePriceTV.setText("Rs. " + courseRVModal.getApellidos());
-        Picasso.get().load(courseRVModal.getEdad()).into(holder.courseIV);
+        PacienteRVModal pacienteRVModal = pacienteRVModalArrayList.get(position);
+        holder.pacienteTV.setText(pacienteRVModal.getNombre());
+        holder.pacienteEdadTV.setText("Rs. " + pacienteRVModal.getApellidos());
+        Picasso.get().load(pacienteRVModal.getEdad()).into(holder.pacienteIV);
         // adding animation to recycler view item on below line.
         setAnimation(holder.itemView, position);
-        holder.courseIV.setOnClickListener(new View.OnClickListener() {
+        holder.pacienteIV.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                courseClickInterface.onCourseClick(position);
+                pacienteClickInterface.onPacienteClick(position);
             }
         });
     }
@@ -69,25 +69,25 @@ public class PacienteRVAdapter //extends RecyclerView.Adapter<PacienteRVAdapter.
 
     @Override
     public int getItemCount() {
-        return courseRVModalArrayList.size();
+        return pacienteRVModalArrayList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         // creating variable for our image view and text view on below line.
-        private ImageView courseIV;
-        private TextView courseTV, coursePriceTV;
+        private ImageView pacienteIV;
+        private TextView pacienteTV, pacienteEdadTV;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             // initializing all our variables on below line.
-            courseIV = itemView.findViewById(R.id.idIVCourse);
-            courseTV = itemView.findViewById(R.id.idTVCOurseName);
-            coursePriceTV = itemView.findViewById(R.id.idTVCousePrice);
+            pacienteIV = itemView.findViewById(R.id.idIVPaciente);
+            pacienteTV = itemView.findViewById(R.id.idTVNombre);
+            pacienteEdadTV = itemView.findViewById(R.id.idTVEdad);
         }
     }
 
     // creating a interface for on click
-    public interface CourseClickInterface {
-        void onCourseClick(int position);
-    } */
+    public interface PacienteClickInterface {
+        void onPacienteClick(int position);
+    }
 }

@@ -22,59 +22,66 @@ public class DatosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paciente);
     }*/
+    /*
 
     public String ID;
-    public String nombre;
-    public String edad;
-    public String clinica;
+    public String pasos;
+    public String distancia;
+    public String calorias;
+    public String ritmo;
+    public String oxi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        txtID = findViewById(R.id.PacInputID);
-        txtNombre = findViewById(R.id.PacInputNombre);
-        txtEdad = findViewById(R.id.PacInputEdad);
-        txtClinica = findViewById(R.id.PacInputClinica);
+        txtID = findViewById(R.id.DatosInputID);
+        txtOxi = findViewById(R.id.DatosInputOxi);
+        txtRitmo = findViewById(R.id.DatosInputRitmo);
+        txtCalorias = findViewById(R.id.DatosInputCalorias);
+        txtDistancia = findViewById(R.id.DatosInputDistancia);
+        txtPasos = findViewById(R.id.DatosInputPasos);
 
         btnSave = findViewById(R.id.btnSave);
         btnShow = findViewById(R.id.btnShow);
         btnUpdate = findViewById(R.id.btnUpdate);
         btnDelete = findViewById(R.id.btnDelete);
 
-        pac = new Paciente();
+        datos = new Datos();
     }
 
-    public static class Paciente {
+    public static class Datos {
 
         private String ID;
-        private String nombre;
-        private String edad;
-        private String clinica;
+        private String oxi;
+        private String ritmo;
+        private String calorias;
+        private String distancia;
+        private String pasos;
 
         public String getID() {
             return ID;
         }
 
-        public String getNombre() {
-            return nombre;
+        public String getOxi() {
+            return oxi;
         }
 
-        public String getEdad() {
-            return edad;
+        public String getRitmo() {
+            return ritmo;
         }
 
-        public String getClinica() {
-            return clinica;
+        public String getCalorias() {
+            return calorias;
         }
 
         public void setID(String ID) {
             this.ID = ID;
         }
 
-        public void setNombre(String nombre) {
-            this.nombre = nombre;
+        public void setOxi(String oxi) {
+            this.oxi = oxi;
         }
 
         public void setEdad(String edad) {
@@ -139,7 +146,8 @@ public class DatosActivity extends AppCompatActivity {
             }
 
         });
-    }
+    } */
+    /*
 
     public void updatePaciente() {
         DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Paciente");
@@ -170,8 +178,9 @@ public class DatosActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
-        });
-    } */
+        }); */
+   // }
+    /*
 
     public void deletePaciente() {
         DatabaseReference deletePac = FirebaseDatabase.getInstance().getReference().child("Paciente");
@@ -187,5 +196,5 @@ public class DatosActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError databaseError) {
             }
         });
-    }
+    } */
 }

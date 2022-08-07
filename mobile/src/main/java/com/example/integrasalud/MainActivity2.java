@@ -32,10 +32,9 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class MainActivity2 extends AppCompatActivity
-        //implements PacienteRVAdapter.CourseClickInterface
+public class MainActivity2 extends AppCompatActivity implements PacienteRVAdapter.PacienteClickInterface
 {
-/*
+
     // creating variables for fab, firebase database,
     // progress bar, list, adapter,firebase auth,
     // recycler view and relative layout.
@@ -73,16 +72,16 @@ public class MainActivity2 extends AppCompatActivity
             }
         });
         // on below line initializing our adapter class.
-        pacienteRVAdapter = new PacienteRVAdapter(pacienteRVModalArrayList, this, this::onCourseClick);
+        pacienteRVAdapter = new PacienteRVAdapter(pacienteRVModalArrayList, this, this::onPacienteClick);
         // setting layout malinger to recycler view on below line.
         pacienteRV.setLayoutManager(new LinearLayoutManager(this));
         // setting adapter to recycler view on below line.
         pacienteRV.setAdapter(pacienteRVAdapter);
         // on below line calling a method to fetch courses from database.
-        getCourses();
+        getPacientes();
     }
 
-    private void getCourses() {
+    private void getPacientes() {
         // on below line clearing our list.
         pacienteRVModalArrayList.clear();
         // on below line we are calling add child event listener method to read the data.
@@ -129,7 +128,7 @@ public class MainActivity2 extends AppCompatActivity
     }
 
     @Override
-    public void onCourseClick(int position) {
+    public void onPacienteClick(int position) {
         // calling a method to display a bottom sheet on below line.
         displayBottomSheet(pacienteRVModalArrayList.get(position));
     }
@@ -195,9 +194,9 @@ public class MainActivity2 extends AppCompatActivity
         alturaTV.setText("Rs." + modal.getAltura());
         actividadTV.setText("Rs." + modal.getActividad());
         idTV.setText(modal.getId());
-        //Picasso.get().load(modal.getCourseImg()).into(courseIV);
+        //Picasso.get().load(modal.getPacienteImg()).into(pacienteIV);
         Button viewBtn = layout.findViewById(R.id.idBtnVIewDetails);
-        Button editBtn = layout.findViewById(R.id.idBtnEditCourse);
+        Button editBtn = layout.findViewById(R.id.idBtnEditPaciente);
 
         // adding on click listener for our edit button.
         editBtn.setOnClickListener(new View.OnClickListener() {
@@ -206,7 +205,7 @@ public class MainActivity2 extends AppCompatActivity
                 // on below line we are opening our EditCourseActivity on below line.
                 Intent i = new Intent(MainActivity2.this, EditarPacienteActivity.class);
                 // on below line we are passing our course modal
-                i.putExtra("course", modal);
+                i.putExtra("paciente", modal);
                 startActivity(i);
             }
         });
@@ -217,9 +216,9 @@ public class MainActivity2 extends AppCompatActivity
                 // on below line we are navigating to browser
                 // for displaying course details from its url
                 Intent i = new Intent(Intent.ACTION_VIEW);
-                i.setData(Uri.parse(modal.getCourseLink()));
+                i.setData(Uri.parse(modal.getPacienteLink()));
                 startActivity(i);
             }
         });
-    }*/
+    }
 }
