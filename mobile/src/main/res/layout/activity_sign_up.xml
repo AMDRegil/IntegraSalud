@@ -83,21 +83,46 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/passwordEditText"
+        android:id="@+id/usuarioSignUpTextField"
         android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:autofillHints=""
+        android:layout_height="75dp"
         android:ems="10"
-        android:hint="@string/contrasena"
-        android:inputType="textPassword"
+        android:hint="@string/nombre"
         android:textColorHint="#757575"
+        android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintVertical_bias="0.384" >
+
+    </com.google.android.material.textfield.TextInputEditText>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/contrasenaTextField"
+        android:layout_width="308dp"
+        android:layout_height="74dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.559"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.759">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autofillHints=""
+            android:ems="10"
+            android:hint="@string/contrasena2"
+            android:inputType="textPassword"
+            android:textColorHint="#757575"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/confirmPasswordEditText"
@@ -110,40 +135,10 @@
         android:textColorHint="#757575"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.631"
+        app:layout_constraintVertical_bias="0.621"
         tools:ignore="SpeakableTextPresentCheck" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/usuarioSignUpTextField"
-        android:layout_width="300dp"
-        android:layout_height="75dp"
-        android:ems="10"
-        android:hint="@string/nombre"
-        android:textColorHint="#757575"
-        android:inputType="textPersonName"
-        android:text="@string/nombre"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.384" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/contrasenaTextField"
-        android:layout_width="300dp"
-        android:layout_height="75dp"
-        android:ems="10"
-        android:hint="@string/contrasena2"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.762" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

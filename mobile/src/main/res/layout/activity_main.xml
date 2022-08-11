@@ -1,48 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="15dp"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txt_idPaciente"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingTop="15dp"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:hint="@string/id_paciente"
+            android:autofillHints="ID Paciente" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/txt_nombrePaciente"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingTop="15dp"
+            android:hint="@string/nombre"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:textColor="#616161"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+    <EditText
+        android:id="@+id/txt_correoPaciente"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="@string/correo"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:paddingTop="15dp"
+        android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <EditText
+            android:id="@+id/txt_contrasenaPaciente"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:paddingTop="15dp"
+            android:hint="@string/contrase_a"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:textColor="#616161"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <EditText
+            android:id="@+id/txt_oxiPaciente"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/oxigenacion"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:paddingTop="15dp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <EditText
+            android:id="@+id/txt_ritmoPaciente"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/ritmo_cardiaco"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:paddingTop="15dp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <EditText
+            android:id="@+id/txt_caloriasPaciente"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/calor_as"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:paddingTop="15dp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <EditText
+            android:id="@+id/txt_distanciaPaciente"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/distancia"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:paddingTop="15dp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <EditText
+            android:id="@+id/txt_pasosPaciente"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="@string/pasos"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:paddingTop="15dp"
+            android:autofillHints="" />
+    </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
-        android:id="@+id/byTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/by"
-        android:textColor="#7A7575"
-        android:textSize="20sp"
+        android:id="@+id/cantidad"
+        android:layout_width="188dp"
+        android:layout_height="33dp"
+        android:text="@string/cantidad"
+        android:textSize="15sp"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.446" />
+
+    <TextView
+        android:id="@+id/txt_aguaPaciente"
+        android:layout_width="378dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="10dp"
+        android:hint="@string/agua"
+        android:shadowColor="#00BCD4"
+        android:textColorHint="#757575"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.635" />
+
+    <Button
+        android:id="@+id/talkButton"
+        android:layout_width="206dp"
+        android:layout_height="59dp"
+        android:layout_margin="10dp"
+        android:text="@string/aceptar"
+        android:textSize="17sp"
+        android:layout_gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.786" />
+        app:layout_constraintVertical_bias="0.852" />
 
     <TextView
-        android:id="@+id/integraTextView"
-        android:layout_width="133dp"
-        android:layout_height="61dp"
-        android:text="@string/integra"
-        android:textAlignment="center"
-        android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.902" />
+        android:layout_width="wrap_content"
+        android:textSize="30sp"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/lista_de_actividades" />
 
-    <ImageView
-        android:id="@+id/logoImageView"
-        android:layout_width="107dp"
-        android:layout_height="109dp"
-        android:contentDescription="@string/logo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.673"
-        app:srcCompat="@drawable/integra_transparente" />
+    <ListView
+        android:id="@+id/lv_datosActividades"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

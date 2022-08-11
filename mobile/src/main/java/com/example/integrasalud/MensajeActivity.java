@@ -1,6 +1,5 @@
 package com.example.integrasalud;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
@@ -15,20 +14,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.android.gms.common.api.internal.ConnectionCallbacks;
-import com.google.android.gms.common.api.internal.OnConnectionFailedListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.gms.tasks.Tasks;
-import com.google.android.gms.wearable.CapabilityClient;
-import com.google.android.gms.wearable.DataApi;
-import com.google.android.gms.wearable.DataClient;
-import com.google.android.gms.wearable.MessageApi;
-import com.google.android.gms.wearable.MessageClient;
-import com.google.android.gms.wearable.MessageEvent;
 import com.google.android.gms.wearable.Node;
 import com.google.android.gms.wearable.Wearable;
 
-import java.nio.charset.StandardCharsets;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
@@ -43,7 +33,7 @@ public class MensajeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_4);
         talkbutton = findViewById(R.id.talkButton);
         agua = findViewById(R.id.agua);
 

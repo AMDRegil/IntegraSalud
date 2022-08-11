@@ -12,7 +12,7 @@
     <string name="registro">Regístrate para empezar a usar Integra</string>
     <string name="registrar">Registrar</string>
     <string name="cuenta">¿Ya tienes una cuenta? Inicia Sesión</string>
-    <string name="nombre">Nombre Completo</string>
+    <string name="nombre">Nombre</string>
     <string name="logout">Logout</string>
     <string name="by">By</string>
     <string name="integra">Integra</string>
@@ -25,7 +25,17 @@
     <string name="id">ID del Paciente</string>
     <string name="bienvenido">Salud Integra</string>
     <string name="recordatorio">Recuerde registrar su oxigenación</string>
-    <string name="cantidad">Su oxigenación es (%):</string>
-    <string name="aceptar">Aceptar</string>
+    <string name="cantidad">Usted ha bebido (ml):</string>
+    <string name="aceptar">Registrar Agua</string>
     <string name="logo1">Logo</string>
+    <string name="lista_de_actividades">Lista de Actividades</string>
+    <string name="agua">Agua</string>
+    <string name="pasos">Pasos</string>
+    <string name="distancia">Distancia</string>
+    <string name="id_paciente">ID Paciente</string>
+    <string name="ritmo_cardiaco">Ritmo Cardiaco</string>
+    <string name="calor_as">Calorías</string>
+    <string name="oxigenacion">Oxigenación</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="correo">Correo</string>
 </resources>

@@ -17,6 +17,9 @@
         android:theme="@style/Theme.IntegraSalud"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
             android:name=".MensajeActivity"
             android:exported="false" />
 
@@ -35,26 +38,12 @@
         </service>
 
         <activity
-            android:name=".MainActivity2"
-            android:exported="false" />
-        <activity
             android:name=".LoginPaciente"
             android:exported="false" />
         <activity
             android:name=".RegistroActivity"
             android:exported="false"
             android:label="Registro" />
-        <activity
-            android:name=".EditarPacienteActivity"
-            android:exported="false"
-            android:label="Editar Paciente" />
-        <activity
-            android:name=".AgregarPacienteActivity"
-            android:exported="false"
-            android:label="Agregar Paciente" />
-        <activity
-            android:name=".PacienteActivity"
-            android:exported="false" />
         <activity
             android:name=".UserActivity"
             android:exported="false" />

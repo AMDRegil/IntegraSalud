@@ -12,19 +12,24 @@
         <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_editar_paciente.xml" value="0.1" />
         <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_login_paciente.xml" value="0.25" />
-        <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_main2.xml" value="0.22" />
+        <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_main_3.xml" value="0.25" />
+        <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_main_4.xml" value="0.2" />
         <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_mensaje.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_paciente.xml" value="0.33" />
         <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_registro.xml" value="0.22" />
-        <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_sign_up.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_sign_up.xml" value="0.22" />
         <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/activity_user.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/bottom_sheet_layout.xml" value="0.25" />
+        <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/custom_alert.xml" value="0.14" />
+        <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/custom_list.xml" value="0.18" />
         <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/datos_rv_item.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/paciente_rv_item.xml" value="0.2" />
         <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/layout/paciente_rv_item2.xml" value="0.22" />
-        <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/menu/menu_main.xml" value="0.22" />
-        <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/wear/src/main/res/layout/activity_main.xml" value="0.36401673640167365" />
+        <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/menu/menu_main.xml" value="0.25" />
+        <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/mobile/src/main/res/menu/menu_main_2.xml" value="0.1" />
+        <entry key="..\:/Users/allis/AndroidStudioProjects/IntegraSalud/wear/src/main/res/layout/activity_main.xml" value="0.5" />
       </map>
     </option>
   </component>

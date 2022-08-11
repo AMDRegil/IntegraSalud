@@ -11,7 +11,7 @@
 
     <!--recycler view for our data-->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/idRVPacientes"
+        android:id="@+id/idRVPaciente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:listitem="@layout/paciente_rv_item" />

@@ -20,4 +20,7 @@
     <color name="dark_blue_shade">#0D2162</color>
     <color name="dark_blue_shade_2">#17388E</color>
     <color name="light_blue_shade">#12B2E6</color>
+    <color name="colorPrimary">#3b3e4b</color>
+    <color name="colorPrimaryDark">#272b45</color>
+    <color name="colorAccent">#3b3e4b</color>
 </resources>
